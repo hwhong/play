@@ -1,0 +1,19 @@
+.root {
+  scroll-snap-type: x mandatory;
+  width: auto;
+  overflow: auto;
+  display: flex;
+  position: relative;
+  height: 100px;
+}
+
+.root > * {
+  margin: 4px;
+}
+
+.item {
+  padding: 6px 50px;
+  border-radius: 8px;
+  background-color: cadetblue;
+  scroll-snap-align: start;
+}
