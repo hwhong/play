@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  cursor: none;
+}
+
+.button {
+  padding: 8px 16px;
+}
