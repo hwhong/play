@@ -5,6 +5,7 @@
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
+  padding: 24px;
 }
 
 .contentWrapper {

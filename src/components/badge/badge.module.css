@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.badge {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  margin-right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
