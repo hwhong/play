@@ -1,8 +1,9 @@
 .root {
   display: flex;
-  justify-content: center;
+  height: 100vh;
   height: 100vh;
   overflow: auto;
+  flex-direction: column;
 }
 
 .grid {
@@ -26,4 +27,13 @@
   top: 8px;
   left: 8px;
   z-index: 3;
+}
+
+.item {
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  width: 60%;
+  height: 400px;
+  margin: 20px auto;
+  position: relative;
 }
