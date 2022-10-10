@@ -1,12 +1,11 @@
 .root {
   display: flex;
-  height: 100vh;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   flex-direction: column;
 }
 
-.grid {
+/* .grid {
   padding: 8px;
   width: 100vw;
   box-sizing: border-box;
@@ -20,7 +19,7 @@
   border: 1px solid #d4d4d4;
   border-radius: 8px;
   position: relative;
-}
+} */
 
 .badge {
   position: absolute;
@@ -33,7 +32,7 @@
   border: 1px solid #d4d4d4;
   border-radius: 8px;
   width: 60%;
-  height: 400px;
+  height: 250px;
   margin: 20px auto;
   position: relative;
 }

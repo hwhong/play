@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import { Badge } from "./components/badge/badge";
+import { Wizard } from "./components/framer-motion/wizard";
 // import { IPadCursor } from "./components/ipad-cursor/ipad-cursor";
 import { Marquee } from "./components/marquee/marquee";
 import { SnapScrolling } from "./components/snap-scrolling/snap-scrolling";
@@ -17,6 +18,7 @@ function App() {
     { name: "Snap Scrolling", node: <SnapScrolling /> },
     { name: "Zoom", node: <Zoom /> },
     // { name: "IPad Cursor", node: <IPadCursor /> },
+    { name: "Framer Motion Wizard", node: <Wizard /> },
   ];
 
   return (
