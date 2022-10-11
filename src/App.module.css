@@ -35,4 +35,6 @@
   height: 250px;
   margin: 20px auto;
   position: relative;
+
+  overflow: auto;
 }

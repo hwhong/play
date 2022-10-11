@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  height: 1000px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  background-color: blueviolet;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  height: 100%;
+}
