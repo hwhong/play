@@ -6,7 +6,9 @@ import { Wizard } from "./components/wizard/wizard";
 import { Marquee } from "./components/marquee/marquee";
 import { SnapScrolling } from "./components/snap-scrolling/snap-scrolling";
 import { Zoom } from "./components/zoom/zoom";
-import { Parallax } from "./components/parallax/parallax";
+import { Slider } from "./components/slider/slider";
+import classNames from "classnames";
+// import { Parallax } from "./components/parallax/parallax";
 
 interface Content {
   name: string;
@@ -21,13 +23,21 @@ function App() {
     // { name: "IPad Cursor", node: <IPadCursor /> },
     { name: "Framer Motion Wizard", node: <Wizard /> },
     // { name: "Framer Motion Parallax", node: <Parallax /> },
+    {
+      name: "Slider",
+      node: <Slider />,
+    },
   ];
 
   return (
     <div className={styles.root}>
       {/* <div className={styles.grid}> */}
       {components.map(({ name, node }, index) => (
-        <div className={styles.item}>
+        <div
+          className={classNames(styles.item, {
+            [styles.off]: name === "Slider",
+          })}
+        >
           <Badge className={styles.badge} index={index + 1}>
             {name}
           </Badge>
