@@ -8,6 +8,7 @@ import { SnapScrolling } from "./components/snap-scrolling/snap-scrolling";
 import { Zoom } from "./components/zoom/zoom";
 import { Slider } from "./components/slider/slider";
 import classNames from "classnames";
+import { ScrollListener } from "./components/scroll-listener/scroll-listener";
 // import { Parallax } from "./components/parallax/parallax";
 
 interface Content {
@@ -26,6 +27,10 @@ function App() {
     {
       name: "Slider",
       node: <Slider />,
+    },
+    {
+      name: "useScroll",
+      node: <ScrollListener />,
     },
   ];
 
