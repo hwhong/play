@@ -11,7 +11,7 @@ export function ScrollListener() {
       <motion.div
         style={{ scaleX: scrollYProgress }}
         className={styles.progress}
-      ></motion.div>
+      />
       <div className={styles.blocksWrapper}>
         {Array.from(Array(10).keys()).map((k) => (
           <div className={styles.block}>{k}</div>
