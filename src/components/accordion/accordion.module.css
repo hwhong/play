@@ -1,0 +1,46 @@
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.root {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bar {
+  display: flex;
+  border: 1px solid #d4d4d4;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+}
+
+.toggleButton {
+  width: 32px;
+  height: 32px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin-left: 8px;
+}
+
+.container {
+  width: auto;
+  background-color: gainsboro;
+  border: 1px solid #d4d4d4;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+}
+
+.text {
+  margin: 20px;
+}

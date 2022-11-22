@@ -9,6 +9,7 @@ import { Zoom } from "./components/zoom/zoom";
 import { Slider } from "./components/slider/slider";
 import classNames from "classnames";
 import { ScrollListener } from "./components/scroll-listener/scroll-listener";
+import { Accordion } from "./components/accordion/accordion";
 // import { Parallax } from "./components/parallax/parallax";
 
 interface Content {
@@ -32,11 +33,14 @@ function App() {
       name: "useScroll",
       node: <ScrollListener />,
     },
+    {
+      name: "Accordion",
+      node: <Accordion />,
+    },
   ];
 
   return (
     <div className={styles.root}>
-      {/* <div className={styles.grid}> */}
       {components.map(({ name, node }, index) => (
         <div
           className={classNames(styles.item, {
@@ -49,7 +53,6 @@ function App() {
           {node}
         </div>
       ))}
-      {/* </div> */}
     </div>
   );
 }

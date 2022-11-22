@@ -21,6 +21,7 @@ export function Zoom() {
           if (scrollTop && scrollTop > start && scrollTop < stop) {
             const scale = Math.max(2.2 - (scrollTop - start) / 500, 1);
             const elementStyle = zoomRef.current?.style;
+            // Going from original (2.2) to normal (1)
             elementStyle!.transform = `scale(${scale})`;
           }
         }
