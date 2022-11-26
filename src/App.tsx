@@ -10,6 +10,8 @@ import { Slider } from "./components/slider/slider";
 import classNames from "classnames";
 import { ScrollListener } from "./components/scroll-listener/scroll-listener";
 import { Accordion } from "./components/accordion/accordion";
+import { InfiniteCircle } from "./components/infinite-circle/infinite-circle";
+import { Button } from "./components/button/button";
 // import { Parallax } from "./components/parallax/parallax";
 
 interface Content {
@@ -36,6 +38,14 @@ function App() {
     {
       name: "Accordion",
       node: <Accordion />,
+    },
+    {
+      name: "Circle",
+      node: <InfiniteCircle />,
+    },
+    {
+      name: "Button",
+      node: <Button onClick={() => console.log("Blah")} children={1} />,
     },
   ];
 

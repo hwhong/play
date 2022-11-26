@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+.root {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #353336;
+  font-size: 40px;
+  color: white;
+  outline: none;
+  user-select: none;
+  border-style: none;
+  touch-action: none;
+}
+
+.notPressed {
+  background-color: #353336;
+}
+
+.pressed {
+  background-color: #757376;
+}
+
+/* .root:active {
+  background-color: #757376;
+} */
+
+.ring {
+  border: 4px solid bisque;
+}
