@@ -12,23 +12,19 @@ interface ButtonProps {
 export function Button({ onClick, children }: ButtonProps) {
   const ref = useRef<HTMLButtonElement>(null);
   const controls = useAnimation();
-  const { buttonProps, isPressed } = useButton(
+  let { buttonProps } = useButton(
     {
       onPressStart: () => {
-        // cancels any running animations
         controls.stop();
         controls.set({ background: "#757376" });
       },
-      onPress: () => {
-        onClick();
+      onPressEnd: () => {
         controls.start({
-          background: ["#757376", "#353336"],
+          background: "#353336",
           transition: { duration: 0.4 },
         });
       },
-      onPressEnd: () => {
-        controls.set({ background: "#353336", transition: { duration: 0.4 } });
-      },
+      onPress: onClick,
     },
     ref
   );
@@ -37,12 +33,13 @@ export function Button({ onClick, children }: ButtonProps) {
     <div className={styles.wrapper}>
       {/* let's you apply classes when the element is in focus */}
       <FocusRing focusRingClass={styles.ring}>
+        {/* @ts-ignore */}
         <motion.button
           animate={controls}
-          style={{ WebkitTapHighlightColor: "transparent" }}
-          className={classNames(styles.root)}
-          ref={ref}
           {...buttonProps}
+          style={{ WebkitTapHighlightColor: "transparent" }}
+          className={classNames(styles.root, {})}
+          ref={ref}
         >
           {children}
         </motion.button>
