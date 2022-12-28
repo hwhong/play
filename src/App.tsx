@@ -17,6 +17,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { AnimatePresenceExample } from "./components/animate-presence/animate-presence";
 // import { Parallax } from "./components/parallax/parallax";
 
 interface Content {
@@ -48,7 +49,7 @@ function TabPanel(props: TabPanelProps) {
 }
 
 function App() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(10);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -84,6 +85,10 @@ function App() {
     {
       name: "Nike Global",
       node: <NikeGlobal />,
+    },
+    {
+      name: "Animate Presence",
+      node: <AnimatePresenceExample />,
     },
   ];
 

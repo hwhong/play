@@ -13,7 +13,7 @@ export function ScrollListener() {
         className={styles.progress}
       />
       <div className={styles.blocksWrapper}>
-        {Array.from(Array(10).keys()).map((k) => (
+        {Array.from(Array(100).keys()).map((k) => (
           <div className={styles.block}>{k}</div>
         ))}
       </div>

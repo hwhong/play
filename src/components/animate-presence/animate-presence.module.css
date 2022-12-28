@@ -1,0 +1,42 @@
+.root {
+  width: 700px;
+  height: 500px;
+  background-color: aquamarine;
+  display: flex;
+}
+
+.sidebarWrapper {
+  display: flex;
+}
+
+.sidebar {
+  /* width: 200px; */
+  height: 100%;
+  background-color: #d4d4d4;
+  display: flex;
+}
+
+.toggle {
+  width: 10px;
+  height: 100%;
+  background-color: blanchedalmond;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  list-style: none;
+}
+
+.listItem {
+  margin: 20px 0;
+}
+
+.removeButton {
+  margin-left: auto;
+}
