@@ -1,6 +1,6 @@
 .root {
   scroll-snap-type: x mandatory;
-  width: auto;
+  width: 500px;
   overflow: auto;
   display: flex;
   position: relative;

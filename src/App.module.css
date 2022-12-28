@@ -5,21 +5,9 @@
   flex-direction: column;
 }
 
-/* .grid {
-  padding: 8px;
-  width: 100vw;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(2, 48%);
-  grid-template-rows: 400px;
-  grid-gap: 8px;
+.tabPanel {
+  width: 100%;
 }
-
-.gridItem {
-  border: 1px solid #d4d4d4;
-  border-radius: 8px;
-  position: relative;
-} */
 
 .badge {
   position: absolute;
