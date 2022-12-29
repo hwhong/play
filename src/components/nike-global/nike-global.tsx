@@ -40,13 +40,34 @@ export function NikeGlobal() {
       display: "none",
     });
     await buttonControl.set({ width: 162 });
+
+    // ------- EXPERIEMENT
+    // await buttonControl.start({
+    //   width: 162,
+    //   transition: { duration: 0.3 },
+    // });
+    // await buttonControl.start({
+    //   height: 40,
+    //   transition: { duration: 0.3 },
+    // });
+    // await originControl.start({
+    //   display: "block",
+    // });
+    // await languageControl.set({
+    //   display: "none",
+    // });
+    // // something weird is happening here
+    // await languageControl.set({
+    //   display: "none",
+    // });
+    // await buttonControl.set({ width: 162 });
   }
 
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
         <motion.div
-          initial={{
+          style={{
             height: 40,
             width: 162,
           }}
