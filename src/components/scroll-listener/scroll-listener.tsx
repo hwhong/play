@@ -1,6 +1,6 @@
+import styles from "./scroll-listener.module.css";
 import { motion, useScroll } from "framer-motion";
 import React, { useRef } from "react";
-import styles from "./scroll-listener.module.css";
 
 export function ScrollListener() {
   const rootRef = useRef<HTMLDivElement>(null);
