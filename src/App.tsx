@@ -6,6 +6,7 @@ import { InfiniteCircle } from "./components/infinite-circle/infinite-circle";
 // import { IPadCursor } from "./components/ipad-cursor/ipad-cursor";
 import { Marquee } from "./components/marquee/marquee";
 import { NikeGlobal } from "./components/nike-global/nike-global";
+import { ReadCV } from "./components/readcv/readcv";
 import { RetoolGrid } from "./components/retool-grid/retool-grid";
 import { ScrollListener } from "./components/scroll-listener/scroll-listener";
 import { Slider } from "./components/slider/slider";
@@ -48,7 +49,7 @@ function TabPanel(props: TabPanelProps) {
 }
 
 function App() {
-  const [value, setValue] = React.useState(11);
+  const [value, setValue] = React.useState(12);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -92,6 +93,10 @@ function App() {
     {
       name: "Draggable Grid",
       node: <RetoolGrid />,
+    },
+    {
+      name: "Read CV",
+      node: <ReadCV />,
     },
   ];
 

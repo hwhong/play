@@ -76,12 +76,11 @@ export default class Draggable extends React.Component<Props, DraggableState> {
     // problem is, after it went left, horizonalDiff is negative
     // when we go right again, horinzontalDiff is poistive, but its less than the current translateX
     // so it will get the negative n
-
-    const horizontalDiff =
-      clientX - this.state.originalX + this.state.lastTranslateX;
+    const diff = clientX - this.state.originalX;
+    const horizontalDiff = diff + this.state.lastTranslateX;
     const multiplier = Math.floor(Math.abs(horizontalDiff) / n);
 
-    if (multiplier !== this.state.multiplier) {
+    if (multiplier !== this.state.multiplier && diff !== 0) {
       const dir = horizontalDiff > this.state.translateX ? n : -n;
 
       const translateX = this.state.translateX + dir;
