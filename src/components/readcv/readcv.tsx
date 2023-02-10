@@ -1,38 +1,66 @@
 import styles from "./readcv.module.css";
 import { motion, useAnimationControls } from "framer-motion";
-import React, { useState } from "react";
+import React from "react";
 
 export function ReadCV() {
-  const [hover, setHover] = useState<boolean>(false);
   const controls = useAnimationControls();
 
-  const onMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
-    setHover(true);
-    console.log(e);
-    // const g = e.target.getBoundingClientRect();
+  const onMouseEnter = async (e: any) => {
+    await controls.start({ opacity: 1, transition: { duration: 0.001 } });
+    await controls.start({
+      width: e.target.offsetWidth,
+      left: `${e.target.offsetLeft}px`,
+    });
+  };
+
+  const onMouseLeave = () => {
+    controls.start({
+      opacity: 0,
+      transition: { duration: 0.001 },
+    });
   };
 
   return (
     <div className={styles.root}>
       <div className={styles.top}>
         <ul className={styles.list}>
-          {hover && <motion.div animate={controls}></motion.div>}
+          <motion.div
+            animate={controls}
+            style={{
+              position: "absolute",
+              height: "40px",
+              backgroundColor: "#EDEDED",
+              borderRadius: "20px",
+            }}
+          />
           <li>
-            <button className={styles.button} onMouseEnter={onMouseEnter}>
+            <button
+              className={styles.button}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
               About
             </button>
           </li>
           <li>
-            <button className={styles.button} onMouseEnter={onMouseEnter}>
+            <button
+              className={styles.button}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
               Features
             </button>
           </li>
           <li>
-            <button className={styles.button} onMouseEnter={onMouseEnter}>
+            <button
+              className={styles.button}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
               Log in
             </button>
           </li>
-          <li>
+          <li className={styles.signupWrapper}>
             <button className={styles.signupButton}>Sign up</button>
           </li>
         </ul>

@@ -22,6 +22,7 @@
   width: fit-content;
   margin: 0 auto;
   list-style-type: none;
+  padding: 0;
 }
 
 .button {
@@ -34,6 +35,10 @@
   font-size: 14px;
   position: relative;
   cursor: pointer;
+}
+
+.signupWrapper {
+  padding-left: 12px;
 }
 
 .signupButton {
